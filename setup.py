@@ -7,5 +7,7 @@ setup(
     install_requires=[
         'flask',
         'python-dotenv',
+        'psycopg2',
+        'voluptuous',
     ],
 )
