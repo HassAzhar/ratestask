@@ -1,0 +1,4 @@
+Flask==2.2.2
+psycopg2==2.9.5
+setuptools==47.1.0
+voluptuous==0.13.1

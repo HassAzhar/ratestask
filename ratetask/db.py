@@ -8,19 +8,14 @@ class DB:
         )
         self.cursor = self.conn.cursor()
 
-    def commit(self):
-        self.conn.commit()
-
-    def execute(self, query):
-        self.cursor.execute(query)
-
     def fetch_execute(self, query):
         self.cursor.execute(query)
         return self.cursor.fetchall()
 
+    # To convert a list of lists to a single list. Useful for similar data type results
     def fetch_formatted(self, query):
         res = self.fetch_execute(query)
-        return list(map(lambda item:item[0], res))
+        return list(map(lambda item: item[0], res))
 
 
 db = DB()
