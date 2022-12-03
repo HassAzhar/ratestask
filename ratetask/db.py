@@ -9,14 +9,18 @@ class DB:
         self.cursor = self.conn.cursor()
 
     def commit(self):
-        self.cursor.commit()
+        self.conn.commit()
 
     def execute(self, query):
         self.cursor.execute(query)
 
-    def fetchExecute(self, query):
+    def fetch_execute(self, query):
         self.cursor.execute(query)
         return self.cursor.fetchall()
+
+    def fetch_formatted(self, query):
+        res = self.fetch_execute(query)
+        return list(map(lambda item:item[0], res))
 
 
 db = DB()
