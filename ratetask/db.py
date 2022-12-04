@@ -8,6 +8,12 @@ class DB:
         )
         self.cursor = self.conn.cursor()
 
+    def reinit(self):
+        self.conn = psycopg2.connect(
+            user="postgres", password="ratestask", host="127.0.0.1", port="5432"
+        )
+        self.cursor = self.conn.cursor()
+
     def fetch_execute(self, query):
         self.cursor.execute(query)
         return self.cursor.fetchall()

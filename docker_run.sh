@@ -1,0 +1,1 @@
+docker run -p 0.0.0.0:5432:5432 --name ratestask ratestask
