@@ -139,7 +139,7 @@ To install dependencies, simply run:
 ./install_dependencies.sh
 ```
 
-To run the project, run:
+To run the project, run: (Note: Docker will have to be run separately.)
 
 ```bash
 ./run_flask_server.sh
