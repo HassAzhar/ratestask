@@ -130,3 +130,34 @@ docker exec -e PGPASSWORD=ratestask -it ratestask psql -U postgres
 Keep in mind that any data written in the Docker container will
 disappear when it shuts down. The next time you run it, it will start
 with a clean state.
+
+# Running the Project
+
+To install dependencies, simply run:
+
+```bash
+./install_dependencies.sh
+```
+
+To run the project, run:
+
+```bash
+./run_flask_server.sh
+```
+
+To run tests:
+
+```bash
+pytest
+```
+
+You may need to run these commands in a Python Virtual Env.
+If these script fail to run with a Permission denied error, run:
+
+```bash
+chmod +x <SCRIPT_NAME>
+```
+
+# Time
+
+It took me nearly 8 hours of focused work to complete this project. Though this period of time also contains numerous breaks. I had trouble setting up Flask as I had not done that before. So that most of my time. It took me an hour and a half to write the actual required API. And the rest of my time went to went to minor improvements and fixes.
